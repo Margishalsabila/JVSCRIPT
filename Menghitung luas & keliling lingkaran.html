@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitung Luas dan Keliling</title>
+</head>
+<body>
+    <h3>Luas</h3>
+    <input type="text" id="jari_jari_luas">
+    <button id="hasil" onclick="hitung_luas()">Hitung</button>
+    <div id="luas"></div><br>
+    <h3>Keliling</h3>
+    <input type="text" id="jari_jari_keliling">
+    <button id="hasill" onclick="hitung_keliling()">Hitung</button>
+    <div id="keliling"></div>
+
+
+
+    <script>
+        let jari_jari_luas = document.getElementById("jari_jari_luas")
+        let jari_jari_keliling = document.getElementById("jari_jari_keliling")
+        let hasil = document.getElementById("hasil")
+        let jumlah = document.getElementById("hasill")
+        function hitung_luas()
+        {
+            hasil_luas = 3.14 * parseInt(jari_jari_luas.value) * parseInt(jari_jari_luas.value)
+            document.getElementById("luas").innerHTML = hasil_luas
+        }
+        function hitung_keliling()
+        {
+            hasil_keliling = 3.14 * parseInt(jari_jari_luas.value) * 2
+            document.getElementById("keliling").innerHTML = hasil_keliling
+        }
+    </script>
+</body>
+</html>

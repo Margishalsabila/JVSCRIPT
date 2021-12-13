@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs mata uang</title>
+</head>
+<body>
+    <input type="text" id="nilai" onchange="hitung_dolar()">
+    <input type="text" id="valas" value="dollar">
+    <input type="text" id="hasil">
+
+
+
+
+
+    <script>
+
+        function hitung_dolar(){
+            if(valas.value == "dollar"){
+                let nilai = Number(document.getElementById("nilai").value);
+                let dolar = 14650
+                let jumlah = nilai * dolar
+                document.getElementById("hasil").value=jumlah
+            }
+        }
+    </script>
+</body>
+</html>

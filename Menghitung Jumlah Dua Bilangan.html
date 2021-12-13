@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+</head>
+<body>
+    <input type="text" id="bilanganganjil" onchange="tambah()">
+    <p>+</p>
+    <input type="text" id="bilangangenap" onchange="tambah()">
+    <p>=</p>
+    <div id="hasil"></div>
+
+
+
+
+    <script>
+        function tambah() {
+            let bilanganganjil = parseInt(document.getElementById("bilanganganjil").value);
+            let bilangangenap = parseInt(document.getElementById("bilangangenap").value);
+            let tambah = bilanganganjil + bilangangenap
+            let hasil = document.getElementById("hasil")
+            hasil.innerHTML = tambah
+        }
+    </script>
+</body>
+</html>

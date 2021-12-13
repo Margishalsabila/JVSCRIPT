@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jam</title>
+</head>
+<body>
+    <input type="text" id="jam_masuk">
+    <input type="text" id="jam_keluar">
+    <button id="jumlah" onclick="jumlah_bayar()">Bayar</button>
+    <div id="hasil"></div>
+
+
+
+
+
+    <script>
+      // input jam masuk
+      const jamMasuk = prompt('Masukan jam masuk ? ');
+
+      // input jam keluar
+      const jamKeluar = prompt('Masukan jam keluar ? ');
+
+      //selisih
+      const selisih = Number(jamKeluar) - Number(jamMasuk);
+
+      //tarif awal
+      const tarifAwal = 3000;
+
+      //tarif 2 jam
+      if (selisih <= 2) {
+          alert(`Biaya keluaran : ${tarifAwal}`);
+      } else {
+          const tarifAkhir = tarifAwal + (selisih - 2) * 1000;
+          alert(`Biaya keluaran : ${tarifAkhir}`);
+      }
+    </script>
+</body>
+</html>
